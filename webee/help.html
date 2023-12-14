@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Animation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+  <div class="menu-container">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <ul class="menu-items">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="help.html">Services</a></li>
+      <li><a href="more.html">Contact</a></li>
+    </ul>
+  </div>
+</body>
+<h1>HELP</h1>
+<p></p>
+</header>
+<style>
+
+.accordion {
+background-color: #9f9f9f;
+color: #000000;
+cursor: pointer;
+padding: 18px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+transition: 0.4s;
+}
+.acc {
+background-color: rgb(52, 0, 14);
+color: #ffffff;
+cursor: pointer;
+padding: 18px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+transition: 0.4s;
+}
+
+.active, .accordion:hover {
+background-color:rgb(52, 0, 14);
+}
+.active, .acc:hover {
+background-color:#b1b1b1;
+}
+
+.accordion:after {
+content: '\002B';
+color: #b1b1b1;
+font-weight: bold;
+float: right;
+margin-left: 5px;
+}
+
+.active:after {
+content: "\2212";
+}
+
+.panel {
+padding: 0 18px;
+background-color: rgb(255, 255, 255);
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+box-shadow: #333;
+border: 2px solid white;
+padding-top: 10px;
+}
+.manel {
+padding: 0 18px;
+background-color: rgb(255, 255, 255);
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+box-shadow: #333;
+border: 2px solid white;
+padding-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<button class="acc"><h3>Family</h3></button>
+<div class="manel">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion"><h3>Friend's</h3></button>
+<div class="panel">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="acc"><h3>Photo's</h3></button>
+<div class="manel">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="accordion"><h3>Video's</h3></button>
+<div class="panel">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+acc[i].addEventListener("click", function() {
+this.classList.toggle("active");
+var panel = this.nextElementSibling;
+if (panel.style.maxHeight) {
+  panel.style.maxHeight = null;
+} else {
+  panel.style.maxHeight = panel.scrollHeight + "px";
+} 
+});
+}
+</script>
+<script>
+var acc = document.getElementsByClassName("acc");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+acc[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var panel = this.nextElementSibling;
+  if (panel.style.maxHeight) {
+    panel.style.maxHeight = null;
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  } 
+});
+}
+</script>
+
+<section class="contact-section">
+<h2>Contact</h2>
+<p>You can contact me at:</p>
+<div class="social-icons">
+  <a href="https://twitter.com/CabungcalChine" target="_blank" class="social-icon">
+    <img src="twiticon.png" alt="Twitter">
+  </a>
+  <a href="https://web.facebook.com/chineee.31" target="_blank" class="social-icon">
+    <img src="fbbicon.png" alt="Facebook">
+  </a>
+  <a href="mailto:chinecabungcal33@gmail.com" class="social-icon">
+    <img src="gmailicon.png" alt="Gmail">
+  </a>
+  <a href="https://instagram.com/your_instagram_profile" target="_blank" class="social-icon">
+    <img src="igicon.png" alt="Instagram">
+  </a>
+  <a href="https://telegram.me/your_telegram_profile" target="_blank" class="social-icon">
+    <img src="tgicon.png" alt="Telegram">
+  </a>
+</div>
+</footer>
+</section>
+</main>
+
+<!-- Footer section -->
+<footer class="footer">
+<p>&copy; 2023 Chine Bruce G. Cabungcal</p>
+</footer>
+
+</body>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f7f7f7;
+}
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+padding:0px;
+margin:0px;
+
+}
+
+/* Header styles */
+.header {
+background-image: url("9286854.gif");
+color: #fff;
+align-items: inherit  ;
+align-content: inherit;
+text-align: center;
+padding-bottom: 50px;
+padding-top: 50px;
+margin:0px;
+
+}
+
+.header h1 {
+font-size: 3em;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header p {
+font-size: 1.2em;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Main content styles */
+.main-content {
+max-width: 900px;
+margin: 0 auto;
+padding: 40px 20px;
+}
+
+.about-section,
+.interests-section,
+.contact-section {
+margin-bottom: 40px;
+}
+
+.about-section h2,
+.interests-section h2,
+.contact-section h2 {
+font-size: 2em;
+margin-bottom: 10px;
+}
+
+/* Footer styles */
+.footer {
+text-align: center;
+padding: 20px 0;
+background-color: rgb(52, 0, 14);
+color: #fff;
+}
+.social-icons {
+display: flex;
+justify-content: center; /* Align icons in the center */
+align-items: center;
+}
+
+.social-icon {
+margin: 0 5px; /* Adjust the horizontal space between icons */
+}
+
+.social-icon img {
+width: 30px; /* Set the desired width */
+height: auto; /* Maintain aspect ratio */
+
+
+}
+
+
+</style>
+<style>
+/* Basic reset */
+
+
+.menu-container {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-button {
+  display:block;
+  position: absolute;
+    top: 40px;
+    left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+
+}
+
+.menu-button span {
+  display: flex;
+  width: 16px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: transform 0.3s, opacity 0.3s;
+  padding-left: 30px;
+  padding-right:10px ;
+  
+}
+
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  border-radius: 5px;
+  width: 150px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.menu-items li {
+  padding: 10px;
+}
+
+.menu-items li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-toggle:checked ~ .menu-items {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0s;
+}
+
+.menu-toggle:checked + .menu-button span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle:checked + .menu-button span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle:checked + .menu-button span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+</style>
+</html>
+
