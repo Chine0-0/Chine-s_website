@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Button</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-btn {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+
+    .menu a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      padding: 8px 0;
+    }
+
+    
+  </style>
+</head>
+<body background="C:\Users\ACER\Downloads\407725572_302920866061472_2729611732657282260_n.jpg">
+
+  <!-- Menu Button -->
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <!-- Menu -->
+  <div class="menu" id="menu">
+    <a href="HOMEPAGE.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Weblinks.html">Web links</a>
+      <a href="more.html">More</a>
+      <a href="help.html">help</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
